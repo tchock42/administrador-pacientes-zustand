@@ -1,30 +1,70 @@
-# React + TypeScript + Vite
+# 🥗 Administrador de Pacientes Veterinaria
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación en **React + Vite + TypeScript** almacena pacientes de una veterinaria
+El proyecto usa Zustand para el manejo del estado global.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
+- [React](https://react.dev/) → Librería principal para la UI
+- [Vite](https://vitejs.dev/) → Bundler rápido para desarrollo y build
+- [TypeScript](https://www.typescriptlang.org/) → Tipado estático y robustez en el código
+- **Zustand** → Manejo de estado global
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📂 Estructura del proyecto
+ - src/ components/       # Componentes reutilizables (formularios, listas, etc.) 
+ - App.tsx           # Componente principal main.tsx          # Punto de entrada
+ - store.ts          # Store de la aplicacion
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## ⚙️ Instalación y uso
+1. Clonar el repositorio:
+  ```bash
+  git clone https://github.com/tchock42/administrador-pacientes-zustand
+  cd administrador-pacientes-zustand
+
+2. Instalar dependencias:
+
+```bash
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Ejecutar en modo desarrollo:
+```bash
+npm run dev
+```
+4. Generar el build de producción:
+```bash
+npm run build
+```
+5. Previsualizar build
+```bash
+npm run preview
+```
+
+## 🧪 Scripts disponibles
+- npm run dev → entorno local con hot reload
+- npm run build → build optimizado para producción
+- npm run preview → servidor de preview del build
+- npm run lint → verificación de estilo con ESLint
+
+## 🎯 Funcionalidades principales
+- Formulario para ingreso de datos
+    - Nombre
+    - Propietario
+    - Correo
+    - Fecha
+    - Síntomas
+- Usa local storage para guardar temporalmente los datos
+
+## 📦 CI/CD
+Este proyecto se ha desplegado en google cloud mediante un contenedor de docker en cloud run
+  ```bash
+  gcloud run deploy administrador-paciente --source . --platform managed --region us-central1 --allow-unauthenticated
+  ```
+
+## 📸 Demo
+([Página en Google Cloud](https://administrador-paciente-512996493296.us-central1.run.app/))
