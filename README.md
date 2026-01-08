@@ -68,4 +68,4 @@ Este proyecto se despliega automáticamente en Netlify:
 - netlify.toml contiene la configuración de despliegue.
 
 ## 📸 Demo
-([Página en Google Cloud]())
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f7114bdc-f4ea-4032-b335-64228d388e17/deploy-status)](https://app.netlify.com/projects/admin-patients-zustand/deploys)
