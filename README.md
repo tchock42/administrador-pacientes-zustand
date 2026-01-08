@@ -61,10 +61,11 @@ npm run preview
 - Usa local storage para guardar temporalmente los datos
 
 ## 📦 CI/CD
-Este proyecto se ha desplegado en google cloud mediante un contenedor de docker en cloud run
-  ```bash
-  gcloud run deploy administrador-paciente --source . --platform managed --region us-central1 --allow-unauthenticated
-  ```
+Este proyecto se despliega automáticamente en Netlify:
+- Cada push a `main` dispara linting, pruebas y build.
+- Si todo pasa, Netlify publica la nueva versión en producción.
+- Integración con GitHub Actions asegura calidad antes del deploy.
+- netlify.toml contiene la configuración de despliegue.
 
 ## 📸 Demo
-([Página en Google Cloud](https://administrador-paciente-512996493296.us-central1.run.app/))
+([Página en Google Cloud]())
